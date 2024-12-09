@@ -633,7 +633,7 @@ GameObject:
   - component: {fileID: 594032138}
   - component: {fileID: 594032137}
   m_Layer: 5
-  m_Name: CropList
+  m_Name: Inventory
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1892,8 +1892,8 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1486240064}
-  - {fileID: 594032136}
   - {fileID: 2108042769}
+  - {fileID: 594032136}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
