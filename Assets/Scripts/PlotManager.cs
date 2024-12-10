@@ -14,6 +14,7 @@ public class PlotManager : MonoBehaviour
 	ScoreController _scorePoint;
 	PlantObject selectedPlant;
 	FarmManager fm;
+	SceneController Screen;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -42,6 +43,7 @@ public class PlotManager : MonoBehaviour
 
     private void OnMouseDown()
     {
+		if(Screen.mode == 0){
         if (isPlanted)
         {
 			if(plantStage == selectedPlant.plantStages.Length - 1 && !fm.isPlanting)
@@ -57,6 +59,7 @@ public class PlotManager : MonoBehaviour
 		{
             Plant(fm.selectPlant.plant);
         }
+		}
 }
 	void UpdatePlant() {
        myplant.sprite = selectedPlant.plantStages[plantStage];
