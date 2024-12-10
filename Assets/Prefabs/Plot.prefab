@@ -354,8 +354,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myplant: {fileID: 1996357196275324911}
   coin: {fileID: 1736463650293489936}
-  _scorePoint: {fileID: 0}
-  selectedPlant: {fileID: 11400000, guid: 2578228c65d598181bad6514afa98bb3, type: 2}
 --- !u!114 &-7159507757803015596
 MonoBehaviour:
   m_ObjectHideFlags: 0
