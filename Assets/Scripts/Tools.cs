@@ -19,8 +19,8 @@ public class Equipment : MonoBehaviour
 		icon.sprite = tool.icon;
 	}
 
-	public void BuyPlant()
+	public void EquipTools()
 	{
-		Debug.Log("Buy"+tool.toolsName);
+		Debug.Log("EquipTools"+tool.toolsName);
 	}
 }

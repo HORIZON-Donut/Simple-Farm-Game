@@ -199,7 +199,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7284940137311319414}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5272595212087780957}
+        m_TargetAssemblyTypeName: Equipment, Assembly-CSharp
+        m_MethodName: EquipTools
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &7205463219870079896
 GameObject:
   m_ObjectHideFlags: 0
@@ -363,7 +375,7 @@ GameObject:
   - component: {fileID: 4458116020551301797}
   - component: {fileID: 5272595212087780957}
   m_Layer: 5
-  m_Name: Equement
+  m_Name: Equipment
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -411,5 +423,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tool: {fileID: 0}
-  nameTxt: {fileID: 0}
-  icon: {fileID: 0}
+  nameTxt: {fileID: 2764661565993005789}
+  icon: {fileID: 2337091017793329522}
