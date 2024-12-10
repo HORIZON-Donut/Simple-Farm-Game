@@ -19,7 +19,7 @@ public class PlantItem : MonoBehaviour
 	void initializationUI()
 	{
 		nameTxt.text = plant.plantName;
-		priceTxt.text = "$" + plant.buyprice;
+		priceTxt.text = "$" + (plant.buyprice * plant.level);
 		icon.sprite = plant.icon;
 	}
 

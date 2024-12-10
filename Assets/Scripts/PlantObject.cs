@@ -10,4 +10,5 @@ public class PlantObject : ScriptableObject
     public int buyprice;
     public int sellprice;
     public Sprite icon;
+	public int level = 1;
 }
