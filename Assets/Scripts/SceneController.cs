@@ -5,11 +5,11 @@ public class SceneController : MonoBehaviour
 {
 	public GameObject Marketplace;
 
-	public void ActivatePanel()
+	public void ActivateMarketPlace()
 	{
 		Marketplace.SetActive(true);
 	}
-	public void DeactivatePanel()
+	public void DeactivateMaeketPlace()
 	{
 		Marketplace.SetActive(false);
 	}
