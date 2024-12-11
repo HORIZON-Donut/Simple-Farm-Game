@@ -4,14 +4,17 @@ using UnityEngine.SceneManagement;
 public class SceneController : MonoBehaviour
 {
 	public GameObject Marketplace;
+	public GameObject Inventory;
 
-	public void ActivateMarketPlace()
+	public void SwitchToMarketplace()
 	{
 		Marketplace.SetActive(true);
+		Inventory.SetActive(false);
 	}
-	public void DeactivateMaeketPlace()
+	public void SwitchToInventory()
 	{
 		Marketplace.SetActive(false);
+		Inventory.SetActive(true);
 	}
 	//public void OnPlayButton()
 	//{
