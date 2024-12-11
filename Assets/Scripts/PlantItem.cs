@@ -7,6 +7,7 @@ public class PlantItem : MonoBehaviour
 
 	public Text nameTxt;
 	public Text priceTxt;
+	public Text upgradePriceTxt;
 	public Image icon;
 
 	FarmManager fm;
@@ -20,6 +21,7 @@ public class PlantItem : MonoBehaviour
 	{
 		nameTxt.text = plant.plantName;
 		priceTxt.text = "$" + (plant.buyprice * plant.level);
+		upgradePriceTxt.text = "$" + (plant.upgradeprice * plant.level);
 		icon.sprite = plant.icon;
 	}
 

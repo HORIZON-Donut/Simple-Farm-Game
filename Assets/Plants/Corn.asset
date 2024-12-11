@@ -21,4 +21,6 @@ MonoBehaviour:
   timeBtwStages: 2
   buyprice: 10
   sellprice: 12
+  upgradeprice: 10
   icon: {fileID: -8344284950600746447, guid: 2ddf6e7cd0dc0f4c0a235b36d26c65de, type: 3}
+  level: 1
