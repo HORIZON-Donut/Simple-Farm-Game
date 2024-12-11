@@ -5,8 +5,8 @@ public class Equipment : MonoBehaviour
 {
 	public  EquipmentObject tool;
 
-	public Text nameTxt;
 	public Image icon;
+	public Text NameTxt;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -15,7 +15,7 @@ public class Equipment : MonoBehaviour
     }
 	void initializationUI()
 	{
-		nameTxt.text = tool.toolsName;
+		NameTxt.text = tool.toolsName;
 		icon.sprite = tool.icon;
 	}
 

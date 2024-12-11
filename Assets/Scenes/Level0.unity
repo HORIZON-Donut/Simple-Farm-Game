@@ -233,11 +233,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4038892307804830001, guid: 7103936b4f43e1fbc855852677946f32, type: 3}
       propertyPath: m_SizeDelta.x
-      value: -575.58
+      value: -508.32
       objectReference: {fileID: 0}
     - target: {fileID: 4038892307804830001, guid: 7103936b4f43e1fbc855852677946f32, type: 3}
       propertyPath: m_SizeDelta.y
-      value: -308.66
+      value: -349.47
       objectReference: {fileID: 0}
     - target: {fileID: 4038892307804830001, guid: 7103936b4f43e1fbc855852677946f32, type: 3}
       propertyPath: m_LocalPosition.x
@@ -269,11 +269,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4038892307804830001, guid: 7103936b4f43e1fbc855852677946f32, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 127
+      value: -141.7
       objectReference: {fileID: 0}
     - target: {fileID: 4038892307804830001, guid: 7103936b4f43e1fbc855852677946f32, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 87.865
+      value: -104.5
       objectReference: {fileID: 0}
     - target: {fileID: 4038892307804830001, guid: 7103936b4f43e1fbc855852677946f32, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -291,6 +291,10 @@ PrefabInstance:
       propertyPath: tool
       value: 
       objectReference: {fileID: 11400000, guid: 658b9c6e3e5070ccba0ef551922819d6, type: 2}
+    - target: {fileID: 7747377132459020400, guid: 7103936b4f43e1fbc855852677946f32, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 14.400002
+      objectReference: {fileID: 0}
     - target: {fileID: 8218066599300225714, guid: 7103936b4f43e1fbc855852677946f32, type: 3}
       propertyPath: m_Name
       value: Equipment
@@ -350,11 +354,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4038892307804830001, guid: 7103936b4f43e1fbc855852677946f32, type: 3}
       propertyPath: m_SizeDelta.x
-      value: -572.3
+      value: -514.86
       objectReference: {fileID: 0}
     - target: {fileID: 4038892307804830001, guid: 7103936b4f43e1fbc855852677946f32, type: 3}
       propertyPath: m_SizeDelta.y
-      value: -308.66
+      value: -349.47
       objectReference: {fileID: 0}
     - target: {fileID: 4038892307804830001, guid: 7103936b4f43e1fbc855852677946f32, type: 3}
       propertyPath: m_LocalPosition.x
@@ -386,11 +390,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4038892307804830001, guid: 7103936b4f43e1fbc855852677946f32, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -26.095009
+      value: -50.00003
       objectReference: {fileID: 0}
     - target: {fileID: 4038892307804830001, guid: 7103936b4f43e1fbc855852677946f32, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -16
+      value: -104.50001
       objectReference: {fileID: 0}
     - target: {fileID: 4038892307804830001, guid: 7103936b4f43e1fbc855852677946f32, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -408,6 +412,10 @@ PrefabInstance:
       propertyPath: tool
       value: 
       objectReference: {fileID: 11400000, guid: cc6f84a3759ed6914b54f9bec8047ff6, type: 2}
+    - target: {fileID: 7747377132459020400, guid: 7103936b4f43e1fbc855852677946f32, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 14.400002
+      objectReference: {fileID: 0}
     - target: {fileID: 8218066599300225714, guid: 7103936b4f43e1fbc855852677946f32, type: 3}
       propertyPath: m_Name
       value: Equipment (1)
@@ -1446,11 +1454,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4038892307804830001, guid: 7103936b4f43e1fbc855852677946f32, type: 3}
       propertyPath: m_SizeDelta.x
-      value: -579.95
+      value: -513.73
       objectReference: {fileID: 0}
     - target: {fileID: 4038892307804830001, guid: 7103936b4f43e1fbc855852677946f32, type: 3}
       propertyPath: m_SizeDelta.y
-      value: -308.66
+      value: -349.47
       objectReference: {fileID: 0}
     - target: {fileID: 4038892307804830001, guid: 7103936b4f43e1fbc855852677946f32, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1482,11 +1490,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4038892307804830001, guid: 7103936b4f43e1fbc855852677946f32, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 129.18
+      value: 141.99997
       objectReference: {fileID: 0}
     - target: {fileID: 4038892307804830001, guid: 7103936b4f43e1fbc855852677946f32, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -16
+      value: -104.50001
       objectReference: {fileID: 0}
     - target: {fileID: 4038892307804830001, guid: 7103936b4f43e1fbc855852677946f32, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1504,6 +1512,10 @@ PrefabInstance:
       propertyPath: tool
       value: 
       objectReference: {fileID: 11400000, guid: 7f248a4c7b5ed30e0b14947777b22f04, type: 2}
+    - target: {fileID: 7747377132459020400, guid: 7103936b4f43e1fbc855852677946f32, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 14.400002
+      objectReference: {fileID: 0}
     - target: {fileID: 8218066599300225714, guid: 7103936b4f43e1fbc855852677946f32, type: 3}
       propertyPath: m_Name
       value: Equipment (3)
@@ -2042,11 +2054,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4038892307804830001, guid: 7103936b4f43e1fbc855852677946f32, type: 3}
       propertyPath: m_SizeDelta.x
-      value: -574.49
+      value: -499.38
       objectReference: {fileID: 0}
     - target: {fileID: 4038892307804830001, guid: 7103936b4f43e1fbc855852677946f32, type: 3}
       propertyPath: m_SizeDelta.y
-      value: -308.66
+      value: -349.47
       objectReference: {fileID: 0}
     - target: {fileID: 4038892307804830001, guid: 7103936b4f43e1fbc855852677946f32, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2078,11 +2090,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4038892307804830001, guid: 7103936b4f43e1fbc855852677946f32, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -25
+      value: 50.299973
       objectReference: {fileID: 0}
     - target: {fileID: 4038892307804830001, guid: 7103936b4f43e1fbc855852677946f32, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 87.86498
+      value: -104.50001
       objectReference: {fileID: 0}
     - target: {fileID: 4038892307804830001, guid: 7103936b4f43e1fbc855852677946f32, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2100,6 +2112,10 @@ PrefabInstance:
       propertyPath: tool
       value: 
       objectReference: {fileID: 11400000, guid: 9cd81d4fa87a232d19314852dc65ec90, type: 2}
+    - target: {fileID: 7747377132459020400, guid: 7103936b4f43e1fbc855852677946f32, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 14.400002
+      objectReference: {fileID: 0}
     - target: {fileID: 8218066599300225714, guid: 7103936b4f43e1fbc855852677946f32, type: 3}
       propertyPath: m_Name
       value: Equipment (2)
