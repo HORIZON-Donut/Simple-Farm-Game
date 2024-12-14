@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9e385e0dcf5524c6abd7f7fb65bccf98, type: 3}
-  m_Name: Tomate
+  m_Name: 002-Tomate
   m_EditorClassIdentifier: 
   plantName: Tomate
   plantStages:
