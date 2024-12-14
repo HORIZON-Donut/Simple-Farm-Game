@@ -11,14 +11,12 @@ public class PlotManager : MonoBehaviour
     int plantStage = 0;
     float timer;
 
-	ScoreController _scorePoint;
 	PlantObject selectedPlant;
 	FarmManager fm;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-		_scorePoint = FindObjectOfType<ScoreController>();
 		fm = FindObjectOfType<FarmManager>();
     }
 
@@ -53,7 +51,7 @@ public class PlotManager : MonoBehaviour
 		{
 			Coin();
 		}
-        else if(fm.isPlanting && fm.selectPlant.plant.buyprice <= _scorePoint.money)
+        else if(fm.isPlanting && fm.selectPlant.plant.buyprice <= fm.money)
 		{
             Plant(fm.selectPlant.plant);
         }
@@ -66,7 +64,7 @@ public class PlotManager : MonoBehaviour
 	{
 		isCoin = false;
 		coin.gameObject.SetActive(false);
-		_scorePoint.AddScore(selectedPlant.sellprice);	
+		fm.Transaction(selectedPlant.sellprice);	
 	}
     void Ground() {
         isPlanted = false;
@@ -81,6 +79,6 @@ public class PlotManager : MonoBehaviour
         UpdatePlant();
         timer = selectedPlant.timeBtwStages;
         myplant.gameObject.SetActive(true);
-		_scorePoint.AddScore(-selectedPlant.buyprice);
+		fm.Transaction(-selectedPlant.buyprice);
 	}
 }
