@@ -805,7 +805,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2075371057}
+      - m_Target: {fileID: 594032140}
         m_TargetAssemblyTypeName: FarmManager, Assembly-CSharp
         m_MethodName: SelectTool
         m_Mode: 3
@@ -1124,7 +1124,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2075371057}
+      - m_Target: {fileID: 594032140}
         m_TargetAssemblyTypeName: FarmManager, Assembly-CSharp
         m_MethodName: SelectTool
         m_Mode: 3
@@ -1338,7 +1338,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2075371057}
+      - m_Target: {fileID: 594032140}
         m_TargetAssemblyTypeName: FarmManager, Assembly-CSharp
         m_MethodName: SelectTool
         m_Mode: 3
@@ -1798,7 +1798,6 @@ MonoBehaviour:
   selectPlant: {fileID: 0}
   isPlanting: 0
   money: 100
-  moneyTxt: {fileID: 389406721}
   isSelectingTool: 0
   toolSelected: 0
   buttonImg: []
@@ -2204,7 +2203,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2075371057}
+      - m_Target: {fileID: 594032140}
         m_TargetAssemblyTypeName: FarmManager, Assembly-CSharp
         m_MethodName: SelectTool
         m_Mode: 3
@@ -2784,7 +2783,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2075371057}
+      - m_Target: {fileID: 594032140}
         m_TargetAssemblyTypeName: FarmManager, Assembly-CSharp
         m_MethodName: SelectTool
         m_Mode: 3
@@ -3942,7 +3941,6 @@ MonoBehaviour:
   selectPlant: {fileID: 0}
   isPlanting: 0
   money: 100
-  moneyTxt: {fileID: 0}
   isSelectingTool: 0
   toolSelected: 0
   buttonImg:

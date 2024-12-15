@@ -33,7 +33,7 @@ public class PlotManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-		if (isPlanted && isDry)
+		if (isPlanted && !isDry)
         {
             //https://medium.com/star-gazers/understanding-time-deltatime-6528a8c2b5c8
 
@@ -50,6 +50,7 @@ public class PlotManager : MonoBehaviour
 
     private void OnMouseDown()
     {
+		Debug.Log(fm.isSelectingTool);
         if (isPlanted)
         {
 			if(plantStage == selectedPlant.plantStages.Length - 1 && !fm.isPlanting)
@@ -65,9 +66,10 @@ public class PlotManager : MonoBehaviour
 		{
             Plant(fm.selectPlant.plant);
         }
-
+		
 		if(fm.isSelectingTool)
 		{
+			Debug.Log("Using Tools on Plot");
 			switch(fm.toolSelected)
 			{
 				case 1:	//hoe
@@ -81,6 +83,8 @@ public class PlotManager : MonoBehaviour
 				case 4:	//axe
 					break;
 				case 5:	//shovel
+					break;
+				default:
 					break;
 			}
 		}

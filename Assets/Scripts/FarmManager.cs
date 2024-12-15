@@ -28,11 +28,11 @@ public class FarmManager : MonoBehaviour
 	{
 		if(selectPlant == newPlant)
 		{
-			CheckSelection();
+			Deselection();
 		}
 		else
 		{
-			CheckSelection();
+			Deselection();
 			selectPlant = newPlant;
 			isPlanting = true;
 		}
@@ -42,24 +42,25 @@ public class FarmManager : MonoBehaviour
 	{
 		if(toolSelected == toolsNumber)
 		{
-			CheckSelection();
+			Deselection();
 		}
 		else
 		{
-			CheckSelection();
+			Deselection();
 			isSelectingTool = true;
 			toolSelected = toolsNumber;
-			buttonImg[toolsNumber -1].sprite = selectedButton;
+			buttonImg[toolsNumber - 1].sprite = selectedButton;
 		}
 	}
 
-	void CheckSelection()
+	void Deselection()
 	{
 		if(isPlanting)
 		{
 			isPlanting = false;
 			selectPlant = null;
 		}
+
 		if(isSelectingTool)
 		{
 			if(toolSelected>0)
