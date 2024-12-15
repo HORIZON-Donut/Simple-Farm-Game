@@ -352,8 +352,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 651841203bc386b9e9c30327c3578225, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isAvailable: 1
   dryPlot: {fileID: -939494641437605497, guid: 5379c504bb1bdf8c3aaeb69bbc028811, type: 3}
   normalPlot: {fileID: -1167222277155119612, guid: 2ddf6e7cd0dc0f4c0a235b36d26c65de, type: 3}
+  unavailablePlot: {fileID: -5737574994739756139, guid: 5379c504bb1bdf8c3aaeb69bbc028811, type: 3}
 --- !u!114 &-7159507757803015596
 MonoBehaviour:
   m_ObjectHideFlags: 0

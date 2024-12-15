@@ -5,6 +5,7 @@ public class PlotManager : MonoBehaviour
 	bool isPlanted = false;
 	bool isCoin = false;
 	bool isDry = true;
+	public bool isAvailable = true;
 
     SpriteRenderer myplant;
 	SpriteRenderer coin;
@@ -13,6 +14,7 @@ public class PlotManager : MonoBehaviour
 
 	public Sprite dryPlot;
 	public Sprite normalPlot;
+	public Sprite unavailablePlot;
 
     int plantStage = 0;
     float timer;
@@ -28,7 +30,14 @@ public class PlotManager : MonoBehaviour
 		coin = transform.GetChild(1).GetComponent<SpriteRenderer>();
 		fm = FindFirstObjectByType<FarmManager>();
 		plot = GetComponent<SpriteRenderer>();
-		plot.sprite = dryPlot;
+		if(!isAvailable)
+		{
+			plot.sprite = unavailablePlot;
+		}
+		else
+		{
+			plot.sprite = dryPlot;
+		}
     }
 
     // Update is called once per frame
@@ -53,7 +62,7 @@ public class PlotManager : MonoBehaviour
     {
         if (isPlanted)
         {
-			if(plantStage == selectedPlant.plantStages.Length - 1 && !fm.isPlanting)
+			if(plantStage == selectedPlant.plantStages.Length - 1 && !fm.isPlanting && !fm.isSelectingTool)
 			{
             	Ground();
 			}
@@ -62,7 +71,7 @@ public class PlotManager : MonoBehaviour
 		{
 			Coin();
 		}
-        else if(fm.isPlanting && fm.selectPlant.plant.buyprice <= fm.money)
+        else if(fm.isPlanting && fm.selectPlant.plant.buyprice <= fm.money && isAvailable)
 		{
             Plant(fm.selectPlant.plant);
         }
@@ -73,18 +82,30 @@ public class PlotManager : MonoBehaviour
 			{
 				case 1:	//hoe
 					break;
+
 				case 2:	//ferterilizer
-					if(speed < 1.5) speed += 0.1f;
+					if(isAvailable){if(speed < 1.5) speed += 0.1f;}
 					break;
+
 				case 3:	//water
+				if(isAvailable){
 					isDry = false;
 					plot.sprite = normalPlot;
 					if(isPlanted) UpdatePlant();
+				}
 					break;
-				case 4:	//axe
+
+				case 4:	//shovel
+					if(!isAvailable)
+					{
+						isAvailable = true;
+						plot.sprite = dryPlot;
+					}
 					break;
-				case 5:	//shovel
+
+				case 5:	//axe
 					break;
+
 				default:
 					break;
 			}
