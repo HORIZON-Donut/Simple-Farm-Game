@@ -7,7 +7,7 @@ public class FarmManager : MonoBehaviour
 	public bool isPlanting = false;
 
 	public int money = 100;
-	public Text moneyTxt;
+	Text moneyTxt;
 
 	public bool isSelectingTool = false;
 	public int toolSelected = 0;
@@ -20,6 +20,7 @@ public class FarmManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+		moneyTxt = transform.GetChild(0).GetComponent<Text>();
         moneyTxt.text = "$"+money;
     }
 

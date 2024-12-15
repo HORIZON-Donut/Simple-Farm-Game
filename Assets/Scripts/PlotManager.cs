@@ -25,7 +25,7 @@ public class PlotManager : MonoBehaviour
     {
 		myplant = transform.GetChild(0).GetComponent<SpriteRenderer>();
 		coin = transform.GetChild(1).GetComponent<SpriteRenderer>();
-		fm = FindObjectOfType<FarmManager>();
+		fm = FindFirstObjectByType<FarmManager>();
 		plot = GetComponent<SpriteRenderer>();
 		plot.sprite = dryPlot;
     }
