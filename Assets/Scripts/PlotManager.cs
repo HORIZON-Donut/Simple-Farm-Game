@@ -16,6 +16,7 @@ public class PlotManager : MonoBehaviour
 
     int plantStage = 0;
     float timer;
+	float speed = 1;
 
 	PlantObject selectedPlant;
 	FarmManager fm;
@@ -37,7 +38,7 @@ public class PlotManager : MonoBehaviour
         {
             //https://medium.com/star-gazers/understanding-time-deltatime-6528a8c2b5c8
 
-            timer -= Time.deltaTime;
+            timer -= speed*Time.deltaTime;
 
             if (timer < 0 && plantStage < selectedPlant.plantStages.Length - 1)
             {
@@ -50,7 +51,6 @@ public class PlotManager : MonoBehaviour
 
     private void OnMouseDown()
     {
-		Debug.Log(fm.isSelectingTool);
         if (isPlanted)
         {
 			if(plantStage == selectedPlant.plantStages.Length - 1 && !fm.isPlanting)
@@ -69,16 +69,17 @@ public class PlotManager : MonoBehaviour
 		
 		if(fm.isSelectingTool)
 		{
-			Debug.Log("Using Tools on Plot");
 			switch(fm.toolSelected)
 			{
 				case 1:	//hoe
 					break;
 				case 2:	//ferterilizer
+					if(speed < 1.5) speed += 0.1f;
 					break;
 				case 3:	//water
 					isDry = false;
 					plot.sprite = normalPlot;
+					if(isPlanted) UpdatePlant();
 					break;
 				case 4:	//axe
 					break;
@@ -91,7 +92,14 @@ public class PlotManager : MonoBehaviour
 	
 }
 	void UpdatePlant() {
-       myplant.sprite = selectedPlant.plantStages[plantStage];
+		if(isDry)
+		{
+			myplant.sprite = selectedPlant.dryPlant;
+		}
+		else
+		{
+       		myplant.sprite = selectedPlant.plantStages[plantStage];
+		}
     }
 	void Coin()
 	{
@@ -102,10 +110,11 @@ public class PlotManager : MonoBehaviour
     void Ground() {
         isPlanted = false;
 		isCoin = true;
-		//isDry = true;
-		//plot.sprite = dryPlot;
+		isDry = true;
+		plot.sprite = dryPlot;
         myplant.gameObject.SetActive(false);
 		coin.gameObject.SetActive(true);
+		speed = 1f;
 	 }
     void Plant(PlantObject newPlant) {
 		selectedPlant = newPlant;

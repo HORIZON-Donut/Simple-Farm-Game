@@ -1800,9 +1800,14 @@ MonoBehaviour:
   money: 100
   isSelectingTool: 0
   toolSelected: 0
-  buttonImg: []
-  normalButton: {fileID: 0}
-  selectedButton: {fileID: 0}
+  buttonImg:
+  - {fileID: 504982197}
+  - {fileID: 425419375}
+  - {fileID: 327119515}
+  - {fileID: 1445057290}
+  - {fileID: 1024472804}
+  normalButton: {fileID: 7122359577590926976, guid: 5379c504bb1bdf8c3aaeb69bbc028811, type: 3}
+  selectedButton: {fileID: -7187093165402134859, guid: 5379c504bb1bdf8c3aaeb69bbc028811, type: 3}
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
