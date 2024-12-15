@@ -8,6 +8,15 @@ public class FarmManager : MonoBehaviour
 
 	public int money = 100;
 	public Text moneyTxt;
+
+	public bool isSelectingTool = false;
+	public int toolSelected = 0;
+	//1 - hoe 2 - ferterilizer 3 - water 4 - axe 5 - shovel
+
+	public Image[] buttonImg;
+	public Sprite normalButton;
+	public Sprite selectedButton;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -18,13 +27,46 @@ public class FarmManager : MonoBehaviour
 	{
 		if(selectPlant == newPlant)
 		{
-			selectPlant = null;
-			isPlanting = false;
+			CheckSelection();
 		}
 		else
 		{
+			CheckSelection();
 			selectPlant = newPlant;
 			isPlanting = true;
+		}
+	}
+
+	public void SelectTool(int toolsNumber)
+	{
+		if(toolSelected == toolsNumber)
+		{
+			CheckSelection();
+		}
+		else
+		{
+			CheckSelection();
+			isSelectingTool = true;
+			toolSelected = toolsNumber;
+			buttonImg[toolsNumber -1].sprite = selectedButton;
+		}
+	}
+
+	void CheckSelection()
+	{
+		if(isPlanting)
+		{
+			isPlanting = false;
+			selectPlant = null;
+		}
+		if(isSelectingTool)
+		{
+			if(toolSelected>0)
+			{
+				buttonImg[toolSelected - 1].sprite = normalButton;
+			}
+			isSelectingTool = false;
+			toolSelected = 0;
 		}
 	}
 
