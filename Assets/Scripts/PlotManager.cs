@@ -4,9 +4,15 @@ public class PlotManager : MonoBehaviour
 {
 	bool isPlanted = false;
 	bool isCoin = false;
+	bool isDry = true;
 
-    public SpriteRenderer myplant;
-	public SpriteRenderer coin;
+    SpriteRenderer myplant;
+	SpriteRenderer coin;
+
+	SpriteRenderer plot;
+
+	public Sprite dryPlot;
+	public Sprite normalPlot;
 
     int plantStage = 0;
     float timer;
@@ -17,13 +23,17 @@ public class PlotManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+		myplant = transform.GetChild(0).GetComponent<SpriteRenderer>();
+		coin = transform.GetChild(1).GetComponent<SpriteRenderer>();
 		fm = FindObjectOfType<FarmManager>();
+		plot = GetComponent<SpriteRenderer>();
+		plot.sprite = dryPlot;
     }
 
     // Update is called once per frame
     void Update()
     {
-		if (isPlanted)
+		if (isPlanted && isDry)
         {
             //https://medium.com/star-gazers/understanding-time-deltatime-6528a8c2b5c8
 
@@ -55,6 +65,25 @@ public class PlotManager : MonoBehaviour
 		{
             Plant(fm.selectPlant.plant);
         }
+
+		if(fm.isSelectingTool)
+		{
+			switch(fm.toolSelected)
+			{
+				case 1:	//hoe
+					break;
+				case 2:	//ferterilizer
+					break;
+				case 3:	//water
+					isDry = false;
+					plot.sprite = normalPlot;
+					break;
+				case 4:	//axe
+					break;
+				case 5:	//shovel
+					break;
+			}
+		}
 	
 }
 	void UpdatePlant() {
@@ -69,6 +98,8 @@ public class PlotManager : MonoBehaviour
     void Ground() {
         isPlanted = false;
 		isCoin = true;
+		//isDry = true;
+		//plot.sprite = dryPlot;
         myplant.gameObject.SetActive(false);
 		coin.gameObject.SetActive(true);
 	 }

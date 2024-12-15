@@ -186,7 +186,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: -2243732589849547616, guid: 2ddf6e7cd0dc0f4c0a235b36d26c65de, type: 3}
+  m_Sprite: {fileID: -7042374689226477266, guid: 2ddf6e7cd0dc0f4c0a235b36d26c65de, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -352,8 +352,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 651841203bc386b9e9c30327c3578225, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myplant: {fileID: 1996357196275324911}
-  coin: {fileID: 1736463650293489936}
+  dryPlot: {fileID: -939494641437605497, guid: 5379c504bb1bdf8c3aaeb69bbc028811, type: 3}
+  normalPlot: {fileID: -1167222277155119612, guid: 2ddf6e7cd0dc0f4c0a235b36d26c65de, type: 3}
 --- !u!114 &-7159507757803015596
 MonoBehaviour:
   m_ObjectHideFlags: 0
