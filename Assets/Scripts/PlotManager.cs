@@ -60,31 +60,22 @@ public class PlotManager : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if (isPlanted)
-        {
-			if(plantStage == selectedPlant.plantStages.Length - 1 && !fm.isPlanting && !fm.isSelectingTool)
-			{
-            	Ground();
-			}
-        }
-		else if(isCoin)
-		{
-			Coin();
-		}
-        else if(fm.isPlanting && fm.selectPlant.plant.buyprice <= fm.money && isAvailable)
-		{
-            Plant(fm.selectPlant.plant);
-        }
-		
 		if(fm.isSelectingTool)
 		{
 			switch(fm.toolSelected)
 			{
 				case 1:	//hoe
+					if (isPlanted)
+       				{
+						if(plantStage == selectedPlant.plantStages.Length - 1 && !fm.isPlanting)
+						{
+            				Ground();
+						}
+        			}
 					break;
 
 				case 2:	//ferterilizer
-					if(isAvailable){if(speed < 1.5) speed += 0.1f;}
+					if(isAvailable){if(speed < 2) speed += 0.1f;}
 					break;
 
 				case 3:	//water
@@ -110,6 +101,15 @@ public class PlotManager : MonoBehaviour
 					break;
 			}
 		}
+		else if(isCoin)
+		{
+			Coin();
+		}
+        else if(fm.isPlanting && fm.selectPlant.plant.buyprice <= fm.money && isAvailable)
+		{
+            Plant(fm.selectPlant.plant);
+        }
+
 	
 }
 	void UpdatePlant() {
