@@ -411,7 +411,17 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      goldencoin_0: -8008193241755715548
+      goldencoin_1: -9082284600774926019
+      goldencoin_2: 744450338324045978
+      goldencoin_3: 5842147477370896875
+      goldencoin_4: -5165217994151453934
+      goldencoin_5: -1885204431059941967
+      goldencoin_6: -46947317892128054
+      goldencoin_7: -2465328587516892547
+      goldencoin_8: 7764676383979880777
+      goldencoin_9: 6540359754714951381
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
