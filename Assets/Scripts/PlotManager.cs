@@ -95,6 +95,7 @@ public class PlotManager : MonoBehaviour
 					break;
 
 				case 5:	//axe
+					CutOff();
 					break;
 
 				default:
@@ -137,6 +138,14 @@ public class PlotManager : MonoBehaviour
 		coin.gameObject.SetActive(true);
 		speed = 1f;
 	 }
+    void CutOff() {
+        isPlanted = false;
+		isDry = true;
+		plot.sprite = dryPlot;
+        myplant.gameObject.SetActive(false);
+		speed = 1f;
+	 }
+
     void Plant(PlantObject newPlant) {
 		selectedPlant = newPlant;
         isPlanted = true;
