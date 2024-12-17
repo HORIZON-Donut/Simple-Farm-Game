@@ -46,8 +46,6 @@ public class PlotManager : MonoBehaviour
     {
 		if (isPlanted && !isDry)
         {
-            //https://medium.com/star-gazers/understanding-time-deltatime-6528a8c2b5c8
-
             timer -= speed*Time.deltaTime;
 
             if (timer < 0 && plantStage < selectedPlant.plantStages.Length - 1)
@@ -59,7 +57,7 @@ public class PlotManager : MonoBehaviour
         }
 		else if(isDry && !isPlanted)
 		{
-			cdTimer -= 1;
+			cdTimer -= 1*Time.deltaTime;
 			if (cdTimer <= 0)
 			{
 				DisablePlot();
@@ -140,20 +138,19 @@ public class PlotManager : MonoBehaviour
 		fm.Transaction(selectedPlant.sellprice);	
 	}
     void Ground() {
-        isPlanted = false;
 		isCoin = true;
-		isDry = true;
 		plot.sprite = dryPlot;
         myplant.gameObject.SetActive(false);
 		coin.gameObject.SetActive(true);
 		speed = 1f;
+		EnablePlot();
 	 }
-    void CutOff() {
-        isPlanted = false;
-		isDry = true;
+    void CutOff() 
+	{
 		plot.sprite = dryPlot;
         myplant.gameObject.SetActive(false);
 		speed = 1f;
+		DisablePlot();
 	 }
 
     void Plant(PlantObject newPlant) {
