@@ -186,7 +186,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: -7042374689226477266, guid: 2ddf6e7cd0dc0f4c0a235b36d26c65de, type: 3}
+  m_Sprite: {fileID: 3601232063820198893, guid: 86065fb7439536dfcbea3b8a02bbcfad, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -356,6 +356,7 @@ MonoBehaviour:
   dryPlot: {fileID: -939494641437605497, guid: 5379c504bb1bdf8c3aaeb69bbc028811, type: 3}
   normalPlot: {fileID: -1167222277155119612, guid: 2ddf6e7cd0dc0f4c0a235b36d26c65de, type: 3}
   unavailablePlot: {fileID: -5737574994739756139, guid: 5379c504bb1bdf8c3aaeb69bbc028811, type: 3}
+  deadPlant: {fileID: 3601232063820198893, guid: 86065fb7439536dfcbea3b8a02bbcfad, type: 3}
 --- !u!114 &-7159507757803015596
 MonoBehaviour:
   m_ObjectHideFlags: 0

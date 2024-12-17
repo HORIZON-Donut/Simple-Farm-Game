@@ -5,6 +5,7 @@ public class PlotManager : MonoBehaviour
 	bool isPlanted = false;
 	bool isCoin = false;
 	bool isDry = true;
+	bool isDead = false;
 	public bool isAvailable = true;
 
     SpriteRenderer myplant;
@@ -15,11 +16,13 @@ public class PlotManager : MonoBehaviour
 	public Sprite dryPlot;
 	public Sprite normalPlot;
 	public Sprite unavailablePlot;
+	public Sprite deadPlant;
 
     int plantStage = 0;
     float timer;
 	float speed = 1;
-	float plotTimer = 60;
+	float plotTimer = 30;
+	float lifeTimer = 25;
 
 	PlantObject selectedPlant;
 	FarmManager fm;
@@ -31,6 +34,7 @@ public class PlotManager : MonoBehaviour
 		coin = transform.GetChild(1).GetComponent<SpriteRenderer>();
 		fm = FindFirstObjectByType<FarmManager>();
 		plot = GetComponent<SpriteRenderer>();
+
 		if(!isAvailable)
 		{
 			plot.sprite = unavailablePlot;
@@ -39,12 +43,13 @@ public class PlotManager : MonoBehaviour
 		{
 			plot.sprite = dryPlot;
 		}
+
     }
 
     // Update is called once per frame
     void Update()
     {
-		if (isPlanted && !isDry)
+		if (isPlanted && !isDry && !isDead)
         {
             timer -= speed*Time.deltaTime;
 
@@ -54,6 +59,16 @@ public class PlotManager : MonoBehaviour
                 plantStage++;
                 UpdatePlant();
             }
+			else if (plantStage >= selectedPlant.plantStages.Length)
+			{
+				lifeTimer -= 1*Time.deltaTime;
+				if (lifeTimer <= 0)
+				{
+					isDead = true;
+					UpdatePlant();
+					lifeTimer = 20;
+				}
+			}
         }
 		else if(!isPlanted)
 		{
@@ -68,7 +83,7 @@ public class PlotManager : MonoBehaviour
 			switch(fm.toolSelected)
 			{
 				case 1:	//hoe
-					if (isPlanted)
+					if (isPlanted && !isDead)
        				{
 						if(plantStage == selectedPlant.plantStages.Length - 1 && !fm.isPlanting)
 						{
@@ -78,7 +93,7 @@ public class PlotManager : MonoBehaviour
 					break;
 
 				case 2:	//ferterilizer
-					if(isAvailable && fm.money >= 20){if(speed < 2) speed += 0.1f;fm.Transaction(-20);}
+					if(isAvailable && fm.money >= 20 && !isDead){if(speed < 2) speed += 0.1f;fm.Transaction(-20);}
 					break;
 
 				case 3:	//water
@@ -120,6 +135,10 @@ public class PlotManager : MonoBehaviour
 		if(isDry)
 		{
 			myplant.sprite = selectedPlant.dryPlant;
+		}
+		else if(isDead)
+		{
+			myplant.sprite = deadPlant;
 		}
 		else
 		{
@@ -163,6 +182,7 @@ public class PlotManager : MonoBehaviour
 		isPlanted = false;
 		isDry = true;
 		isAvailable = false;
+		isDead = false;
 		plot.sprite = unavailablePlot;
 	}
 
@@ -172,7 +192,7 @@ public class PlotManager : MonoBehaviour
 		isDry = true;
 		isAvailable = true;
 		plot.sprite = dryPlot;
-		plotTimer = 60;
+		plotTimer = 30;
 	}
 
 	void UpdatePlotTimer()
@@ -181,7 +201,7 @@ public class PlotManager : MonoBehaviour
 		if(plotTimer <= 0)
 		{
 			CutOff();
-			plotTimer = 60;
+			plotTimer = 30;
 		}
 
 	}
