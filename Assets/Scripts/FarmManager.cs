@@ -6,7 +6,7 @@ public class FarmManager : MonoBehaviour
 	public PlantItem selectPlant;
 	public bool isPlanting = false;
 
-	public int money = 100;
+	public int money = 200;
 	Text moneyTxt;
 
 	public bool isSelectingTool = false;
