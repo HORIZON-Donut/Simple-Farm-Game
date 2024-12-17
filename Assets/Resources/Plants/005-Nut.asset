@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e385e0dcf5524c6abd7f7fb65bccf98, type: 3}
+  m_Name: 005-Nut
+  m_EditorClassIdentifier: 
+  plantName: Bean
+  plantStages:
+  - {fileID: -3780498461408796120, guid: 2ddf6e7cd0dc0f4c0a235b36d26c65de, type: 3}
+  - {fileID: 1889158031495529450, guid: 1190aca22010df1f78d271f37d14dddb, type: 3}
+  - {fileID: 7220509810093316105, guid: cf55527cb09a9ced08ed638582ff2bf0, type: 3}
+  - {fileID: 364867078988347017, guid: 791c5d2e73da7c1719bbfef9bbc5c370, type: 3}
+  - {fileID: -4613718620243013361, guid: 2bcf9ab45ee4b470eac4895e26d04a00, type: 3}
+  timeBtwStages: 10
+  buyprice: 30
+  sellprice: 31
+  icon: {fileID: 48719161223466123, guid: f1f6eba8033e48831880523fd54826d6, type: 3}
+  dryPlant: {fileID: -6722333681955717557, guid: 5379c504bb1bdf8c3aaeb69bbc028811, type: 3}
