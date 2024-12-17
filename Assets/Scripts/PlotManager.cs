@@ -97,9 +97,10 @@ public class PlotManager : MonoBehaviour
 					break;
 
 				case 3:	//water
-					if(isAvailable){
+					if(isAvailable && fm.money >= 2){
 						isDry = false;
 						plot.sprite = normalPlot;
+						fm.Transaction(-2);
 						if(isPlanted) UpdatePlant();
 					}
 					break;
@@ -113,7 +114,7 @@ public class PlotManager : MonoBehaviour
 					break;
 
 				case 5:	//axe
-					CutOff();
+					if(isPlanted && fm.money >= 10){CutOff(); fm.Transaction(-10);}
 					break;
 
 				default:
