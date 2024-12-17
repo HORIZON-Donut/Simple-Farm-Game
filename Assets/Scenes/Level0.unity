@@ -1717,7 +1717,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectPlant: {fileID: 0}
   isPlanting: 0
-  money: 100
+  money: 200
   isSelectingTool: 0
   toolSelected: 0
   buttonImg:
