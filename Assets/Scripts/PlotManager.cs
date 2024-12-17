@@ -75,7 +75,7 @@ public class PlotManager : MonoBehaviour
 					break;
 
 				case 2:	//ferterilizer
-					if(isAvailable){if(speed < 2) speed += 0.1f;}
+					if(isAvailable && fm.money >= 20){if(speed < 2) speed += 0.1f;fm.Transaction(-20);}
 					break;
 
 				case 3:	//water
@@ -87,10 +87,11 @@ public class PlotManager : MonoBehaviour
 					break;
 
 				case 4:	//shovel
-					if(!isAvailable)
+					if(!isAvailable && fm.money >= 50)
 					{
 						isAvailable = true;
 						plot.sprite = dryPlot;
+						fm.Transaction(-50);
 					}
 					break;
 

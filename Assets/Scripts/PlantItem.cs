@@ -29,7 +29,16 @@ public class PlantItem : MonoBehaviour
 
 	public void BuyPlant()
 	{
-		Debug.Log("Buy"+plant.plantName);
 		fm.SelectPlant(this);
+	}
+
+	public void UpgradePlant()
+	{
+		if(fm.money >= plant.upgradeprice)
+		{
+			plant.level += 1;
+			plant.UpdatePlant();
+			initializationUI();
+		}
 	}
 }
