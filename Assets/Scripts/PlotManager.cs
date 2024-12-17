@@ -87,11 +87,11 @@ public class PlotManager : MonoBehaviour
 					break;
 
 				case 3:	//water
-				if(isAvailable){
-					isDry = false;
-					plot.sprite = normalPlot;
-					if(isPlanted) UpdatePlant();
-				}
+					if(isAvailable){
+						isDry = false;
+						plot.sprite = normalPlot;
+						if(isPlanted) UpdatePlant();
+					}
 					break;
 
 				case 4:	//shovel
