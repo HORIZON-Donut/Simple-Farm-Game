@@ -57,12 +57,7 @@ public class PlotManager : MonoBehaviour
         }
 		else if(!isPlanted)
 		{
-			plotTimer -= 1*Time.deltaTime;
-			if (plotTimer <= 0)
-			{
-				DisablePlot();
-				plotTimer = 60;
-			}
+			UpdatePlotTimer();
 		}
     }
 
@@ -178,5 +173,16 @@ public class PlotManager : MonoBehaviour
 		isAvailable = true;
 		plot.sprite = dryPlot;
 		plotTimer = 60;
+	}
+
+	void UpdatePlotTimer()
+	{
+		plotTimer -= 1*Time.deltaTime;
+		if(plotTimer <= 0)
+		{
+			CutOff();
+			plotTimer = 60;
+		}
+
 	}
 }
