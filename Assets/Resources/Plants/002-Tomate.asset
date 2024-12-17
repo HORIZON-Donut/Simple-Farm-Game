@@ -20,8 +20,6 @@ MonoBehaviour:
   - {fileID: 8304950708062100032, guid: 2ddf6e7cd0dc0f4c0a235b36d26c65de, type: 3}
   timeBtwStages: 3
   buyprice: 15
-  sellprice: 17
-  upgradeprice: 20
+  sellprice: 18
   icon: {fileID: -1322868838983756743, guid: 2ddf6e7cd0dc0f4c0a235b36d26c65de, type: 3}
   dryPlant: {fileID: -6722333681955717557, guid: 5379c504bb1bdf8c3aaeb69bbc028811, type: 3}
-  level: 1

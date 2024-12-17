@@ -21,6 +21,6 @@ MonoBehaviour:
   - {fileID: -8157165606216441942, guid: 5f8ee8180d6ad6171a0c01c303b675ef, type: 3}
   timeBtwStages: 7
   buyprice: 25
-  sellprice: 30
+  sellprice: 33
   icon: {fileID: -4224434159975881483, guid: f1f6eba8033e48831880523fd54826d6, type: 3}
   dryPlant: {fileID: -6722333681955717557, guid: 5379c504bb1bdf8c3aaeb69bbc028811, type: 3}
