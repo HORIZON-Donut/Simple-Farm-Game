@@ -59,7 +59,7 @@ public class PlotManager : MonoBehaviour
                 plantStage++;
                 UpdatePlant();
             }
-			else if (plantStage >= selectedPlant.plantStages.Length)
+			else if (plantStage == selectedPlant.plantStages.Length - 1)
 			{
 				lifeTimer -= 1*Time.deltaTime;
 				if (lifeTimer <= 0)
