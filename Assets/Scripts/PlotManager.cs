@@ -19,7 +19,7 @@ public class PlotManager : MonoBehaviour
     int plantStage = 0;
     float timer;
 	float speed = 1;
-	float cdTimer = 300;
+	float cdTimer = 30;
 
 	PlantObject selectedPlant;
 	FarmManager fm;
@@ -61,7 +61,7 @@ public class PlotManager : MonoBehaviour
 			if (cdTimer <= 0)
 			{
 				DisablePlot();
-				cdTimer = 300;
+				cdTimer = 30;
 			}
 		}
     }
@@ -177,6 +177,6 @@ public class PlotManager : MonoBehaviour
 		isDry = true;
 		isAvailable = true;
 		plot.sprite = dryPlot;
-		cdTimer = 300;
+		cdTimer = 30;
 	}
 }
