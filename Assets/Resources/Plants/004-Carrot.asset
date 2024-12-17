@@ -22,5 +22,6 @@ MonoBehaviour:
   timeBtwStages: 7
   buyprice: 25
   sellprice: 33
+  unlockPrice: 80
   icon: {fileID: -4224434159975881483, guid: f1f6eba8033e48831880523fd54826d6, type: 3}
   dryPlant: {fileID: -6722333681955717557, guid: 5379c504bb1bdf8c3aaeb69bbc028811, type: 3}

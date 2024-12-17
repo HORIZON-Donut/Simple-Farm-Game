@@ -9,6 +9,7 @@ public class PlantObject : ScriptableObject
     public float timeBtwStages;
     public int buyprice;
     public int sellprice;
+	public int unlockPrice;
     public Sprite icon;
 	public Sprite dryPlant;
 }
