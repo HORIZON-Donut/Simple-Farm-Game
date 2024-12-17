@@ -19,6 +19,7 @@ public class PlotManager : MonoBehaviour
     int plantStage = 0;
     float timer;
 	float speed = 1;
+	float cdTimer = 300;
 
 	PlantObject selectedPlant;
 	FarmManager fm;
@@ -56,6 +57,15 @@ public class PlotManager : MonoBehaviour
                 UpdatePlant();
             }
         }
+		else if(isDry && !isPlanted)
+		{
+			cdTimer -= 1;
+			if (cdTimer <= 0)
+			{
+				DisablePlot();
+				cdTimer = 300;
+			}
+		}
     }
 
     private void OnMouseDown()
@@ -89,8 +99,7 @@ public class PlotManager : MonoBehaviour
 				case 4:	//shovel
 					if(!isAvailable && fm.money >= 50)
 					{
-						isAvailable = true;
-						plot.sprite = dryPlot;
+						EnablePlot();
 						fm.Transaction(-50);
 					}
 					break;
@@ -155,5 +164,22 @@ public class PlotManager : MonoBehaviour
         timer = selectedPlant.timeBtwStages;
         myplant.gameObject.SetActive(true);
 		fm.Transaction(-selectedPlant.buyprice);
+	}
+
+	void DisablePlot()
+	{
+		isPlanted = false;
+		isDry = true;
+		isAvailable = false;
+		plot.sprite = unavailablePlot;
+	}
+
+	void EnablePlot()
+	{
+		isPlanted = false;
+		isDry = true;
+		isAvailable = true;
+		plot.sprite = dryPlot;
+		cdTimer = 300;
 	}
 }

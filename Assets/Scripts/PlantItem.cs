@@ -34,8 +34,9 @@ public class PlantItem : MonoBehaviour
 
 	public void UpgradePlant()
 	{
-		if(fm.money >= plant.upgradeprice)
+		if(fm.money >= plant.upgradeprice && plant.level <= plant.maxLvl)
 		{
+			fm.Transaction(-plant.upgradeprice);
 			plant.level += 1;
 			plant.UpdatePlant();
 			initializationUI();

@@ -13,12 +13,13 @@ public class PlantObject : ScriptableObject
     public Sprite icon;
 	public Sprite dryPlant;
 	public int level = 1;
+	public int maxLvl = 5;
 
 	public void UpdatePlant()
 	{
 		timeBtwStages *= level;
-		buyprice *= level;
-		sellprice *= level;
-		upgradeprice *= level;
+		buyprice = buyprice*level;
+		sellprice = sellprice*level;
+		upgradeprice = upgradeprice*level;
 	}
 }
